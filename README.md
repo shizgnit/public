@@ -1,5 +1,5 @@
 # Public
-Publicly shared applications and examples.  The https://github.com/shizgnit/application-template/README.md has details on the build requirements.
+Publicly shared applications and examples.  The [Application Template](https://github.com/shizgnit/application-template/blob/develop/README.md) has details on the build requirements.
 
 # Application Template
 

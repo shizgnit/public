@@ -1,4 +1,4 @@
-# public
+# Public
 Publicly shared applications and examples.
 
 # Application Template
@@ -38,7 +38,14 @@ Specify the project name as the same value as above.
 
 ![alt text](screenshots/ProjectName.png)
 
-Include the projects for the various binary targets and a single application.hpp header.
+Include the projects for the various binary targets and a single application.hpp header with the following contents.
+
+    #pragma once
+    
+    #include "engine.hpp"
+    
+    class app : public application {
+    };
 
 ![alt text](screenshots/SolutionSetup.png)
 

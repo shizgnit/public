@@ -5,11 +5,92 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShaderWerks", "ShaderWerks\ShaderWerks.vcxitems", "{1C793CFD-7C8E-45C8-9087-96D5BF650155}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "android-client.NativeActivity", "template\src\client\android-client.NativeActivity\android-client.NativeActivity.vcxproj", "{B99E6339-699B-4076-9859-749B394D2690}"
+EndProject
+Project("{39E2626F-3545-4960-A6E8-258AD8476CE5}") = "android-client.Packaging", "template\src\client\android-client.Packaging\android-client.Packaging.androidproj", "{B1F6C688-C962-450B-A64F-CD46E3C61B88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "windows-client.Executable", "template\src\client\windows-client.Executable\windows-client.Executable.vcxproj", "{BF3F4A78-38AC-41D9-82B9-B985399AFD49}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B99E6339-699B-4076-9859-749B394D2690}.Debug|ARM.ActiveCfg = Debug|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Debug|ARM.Build.0 = Debug|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Debug|ARM64.Build.0 = Debug|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Debug|x64.ActiveCfg = Debug|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Debug|x64.Build.0 = Debug|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Debug|x86.ActiveCfg = Debug|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Debug|x86.Build.0 = Debug|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Release|ARM.ActiveCfg = Release|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Release|ARM.Build.0 = Release|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Release|ARM64.ActiveCfg = Release|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Release|ARM64.Build.0 = Release|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Release|x64.ActiveCfg = Release|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Release|x64.Build.0 = Release|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Release|x86.ActiveCfg = Release|ARM64
+		{B99E6339-699B-4076-9859-749B394D2690}.Release|x86.Build.0 = Release|ARM64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|ARM.Build.0 = Debug|ARM
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|ARM.Deploy.0 = Debug|ARM
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|ARM64.Build.0 = Debug|ARM64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|x64.ActiveCfg = Debug|x64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|x64.Build.0 = Debug|x64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|x64.Deploy.0 = Debug|x64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|x86.ActiveCfg = Debug|x86
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|x86.Build.0 = Debug|x86
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Debug|x86.Deploy.0 = Debug|x86
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|ARM.ActiveCfg = Release|ARM
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|ARM.Build.0 = Release|ARM
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|ARM.Deploy.0 = Release|ARM
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|ARM64.ActiveCfg = Release|ARM64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|ARM64.Build.0 = Release|ARM64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|ARM64.Deploy.0 = Release|ARM64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|x64.ActiveCfg = Release|x64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|x64.Build.0 = Release|x64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|x64.Deploy.0 = Release|x64
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|x86.ActiveCfg = Release|x86
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|x86.Build.0 = Release|x86
+		{B1F6C688-C962-450B-A64F-CD46E3C61B88}.Release|x86.Deploy.0 = Release|x86
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Debug|ARM.ActiveCfg = Debug|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Debug|ARM.Build.0 = Debug|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Debug|ARM64.ActiveCfg = Debug|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Debug|ARM64.Build.0 = Debug|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Debug|x64.ActiveCfg = Debug|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Debug|x64.Build.0 = Debug|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Debug|x86.ActiveCfg = Debug|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Debug|x86.Build.0 = Debug|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Release|ARM.ActiveCfg = Release|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Release|ARM.Build.0 = Release|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Release|ARM64.ActiveCfg = Release|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Release|ARM64.Build.0 = Release|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Release|x64.ActiveCfg = Release|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Release|x64.Build.0 = Release|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Release|x86.ActiveCfg = Release|x64
+		{BF3F4A78-38AC-41D9-82B9-B985399AFD49}.Release|x86.Build.0 = Release|x64
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9FBAB458-1F11-488B-8609-3C341285B28B}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ShaderWerks\ShaderWerks.vcxitems*{1c793cfd-7c8e-45c8-9087-96d5bf650155}*SharedItemsImports = 9
+		ShaderWerks\ShaderWerks.vcxitems*{b99e6339-699b-4076-9859-749b394d2690}*SharedItemsImports = 4
+		template\src\engine\universal-engine.vcxitems*{b99e6339-699b-4076-9859-749b394d2690}*SharedItemsImports = 4
+		ShaderWerks\ShaderWerks.vcxitems*{bf3f4a78-38ac-41d9-82b9-b985399afd49}*SharedItemsImports = 4
+		template\src\engine\universal-engine.vcxitems*{bf3f4a78-38ac-41d9-82b9-b985399afd49}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal

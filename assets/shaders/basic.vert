@@ -1,23 +1,20 @@
 precision mediump float;
 precision mediump int;
 
-in mat4 a_ModelMatrix;
-in vec4 a_Vertex;
-in vec4 a_Texture;
-in vec4 a_Normal;
+attribute mat4 a_ModelMatrix;
+attribute vec4 a_Vertex;
+attribute vec4 a_Texture;
+attribute vec4 a_Normal;
 uniform mat4 u_ProjectionMatrix;
 uniform mat4 u_ViewMatrix;
 uniform mat4 u_ModelMatrix; 
 uniform mat4 u_LightingMatrix;
 uniform vec4 u_Clipping;
 
-out vec4 v_Vertex;
-out vec2 v_Texture;
-out vec4 v_Normal;
-out vec4 v_Lighting;
-out vec4 v_Clipping;
-
-out uint v_Flags;
+varying vec4 v_Vertex;
+varying vec2 v_Texture;
+varying vec4 v_Normal;
+varying vec4 v_Clipping;
 
 void main()
 {

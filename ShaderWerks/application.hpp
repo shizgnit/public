@@ -12,6 +12,9 @@ class app : public application {
         input->handler(platform::input::KEY, platform::input::UP, [](const platform::input::event& ev) { scene::global().keyboard_input(ev); }, 0);
 
         scene::global().add("debug", new console());
+        
+        // Just to avoid having to do keyboard input on ios for now
+        scene::global().toggle("debug");
 
         gui->position();
     }

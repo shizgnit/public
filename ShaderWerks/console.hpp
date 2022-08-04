@@ -46,7 +46,13 @@ public:
         gui->shader = assets->get<type::program>("gui");
         gui->font = assets->get<type::font>("default");
 
-        gui->create(&scene::debug(), 512, 720, 0, 0, 0, 80)->position(graphics->width() - 512 - 20, 20);
+        int margin = 20;
+        int textbox = 20;
+        
+        int w = graphics->width() - (margin * 2);
+        int h = graphics->height() - (margin * 3 + textbox);
+        
+        gui->create(&scene::debug(), w, h, 0, 0, 0, 80)->position(margin, margin);
         scene::debug().selectable = true;
         scene::debug().alignment = platform::interface::widget::positioning::bottom;
 
@@ -54,7 +60,7 @@ public:
             // TODO: scroll up and down the contents
             }, 0);
 
-        gui->create(&commandline, 512, 20, 0, 0, 0, 80)->position(graphics->width() - 512 - 20, 750);
+        gui->create(&commandline, w, textbox, 0, 0, 0, 80)->position(margin, margin * 2 + h);
         commandline.selectable = true;
         commandline.input = true;
         commandline.multiline = false;

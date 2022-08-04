@@ -10,12 +10,12 @@ uniform vec4 u_Clipping;
 uniform vec4 u_AmbientLightPosition;
 uniform vec4 u_AmbientLightColor;
 
-in vec4 v_Vertex;
-in vec2 v_Texture;
-in vec4 v_Normal;
-in vec4 v_Clipping;
+varying vec4 v_Vertex;
+varying vec2 v_Texture;
+varying vec4 v_Normal;
+varying vec4 v_Clipping;
 
-out vec4 diffuseColor;
+// out vec4 diffuseColor;
 
 void main()
 {
@@ -31,5 +31,5 @@ void main()
   if ( v_Clipping.w < 0.0 )
     discard;
 
-  diffuseColor = texture(u_SurfaceTextureUnit, v_Texture.xy);
+  gl_FragColor = texture2D(u_SurfaceTextureUnit, v_Texture.xy);
 }

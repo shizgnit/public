@@ -16,6 +16,5 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)application.hpp" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)console.hpp" />
   </ItemGroup>
 </Project>

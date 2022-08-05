@@ -51,7 +51,6 @@
 		E7A20D1428965B370086754E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A20D1228965B370086754E /* LaunchScreen.storyboard */; };
 		E7A20D1728965B370086754E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A20D1628965B370086754E /* main.m */; };
 		E7DF08BB2896EA35000873FC /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7DF08BA2896EA35000873FC /* ViewController.mm */; };
-		E7DF08BE2896EE24000873FC /* SimpleRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7DF08BD2896EE24000873FC /* SimpleRenderer.cpp */; };
 		E7DF08C22897016E000873FC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DF08C12897016E000873FC /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -140,8 +139,6 @@
 		E7A20D1528965B370086754E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A20D1628965B370086754E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7DF08BA2896EA35000873FC /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
-		E7DF08BC2896EE24000873FC /* SimpleRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleRenderer.h; sourceTree = "<group>"; };
-		E7DF08BD2896EE24000873FC /* SimpleRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleRenderer.cpp; sourceTree = "<group>"; };
 		E7DF08C12897016E000873FC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -393,8 +390,6 @@
 				E7A20D0828965B360086754E /* SceneDelegate.m */,
 				E7A20D0A28965B360086754E /* ViewController.h */,
 				E7DF08BA2896EA35000873FC /* ViewController.mm */,
-				E7DF08BC2896EE24000873FC /* SimpleRenderer.h */,
-				E7DF08BD2896EE24000873FC /* SimpleRenderer.cpp */,
 				E7A20D0D28965B360086754E /* Main.storyboard */,
 				E7A20D1028965B370086754E /* Assets.xcassets */,
 				E7A20D1228965B370086754E /* LaunchScreen.storyboard */,
@@ -567,7 +562,6 @@
 				E7DF08BB2896EA35000873FC /* ViewController.mm in Sources */,
 				E70248472897684800121606 /* miniz.c in Sources */,
 				E7604385289738BF00B53612 /* universal.cpp in Sources */,
-				E7DF08BE2896EE24000873FC /* SimpleRenderer.cpp in Sources */,
 				E7A20D0628965B360086754E /* AppDelegate.m in Sources */,
 				E7A20D1728965B370086754E /* main.m in Sources */,
 				E7023CF1289767B300121606 /* lodepng.cpp in Sources */,

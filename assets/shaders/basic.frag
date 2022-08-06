@@ -6,7 +6,6 @@ uniform sampler2D u_ShadowTextureUnit;
 uniform sampler2D u_NormalTextureUnit;
 
 uniform vec4 u_Clipping;
-
 uniform vec4 u_AmbientLightPosition;
 uniform vec4 u_AmbientLightColor;
 

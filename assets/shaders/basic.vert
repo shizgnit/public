@@ -5,6 +5,7 @@ attribute mat4 a_ModelMatrix;
 attribute vec4 a_Vertex;
 attribute vec4 a_Texture;
 attribute vec4 a_Normal;
+
 uniform mat4 u_ProjectionMatrix;
 uniform mat4 u_ViewMatrix;
 uniform mat4 u_ModelMatrix; 

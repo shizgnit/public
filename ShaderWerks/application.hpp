@@ -93,7 +93,7 @@ class app : public application {
             graphics->draw(*assets->get<type::entity>("object").object, assets->get<type::program>("shader"), graphics->perspective, pos);
         }
 
-        gui->draw();
+        //gui->draw();
         graphics->flush();
     }
 

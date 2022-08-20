@@ -54,7 +54,7 @@ class app : public application {
         // Just to avoid having to do keyboard input on ios for now
         scene::global().toggle("debug");
 
-        scene::global().call("/load entity objects/suzanne object");
+        //scene::global().call("/load entity objects/suzanne object");
         scene::global().call("/set position (0.0,-1.0,-2.0)");
         scene::global().call("/set rotation 0.2");
 
@@ -62,6 +62,12 @@ class app : public application {
         scene::global().call("/set ambient.color (1.0,1.0,1.0)");
         scene::global().call("/set ambient.bias 0.2");
         scene::global().call("/set ambient.strength 1.0");
+
+        //scene::global().call("/load shader shaders/basic shader");
+        //scene::global().call("/compile");
+        scene::global().call("/load shader shaders/basic shader");
+        scene::global().call("/load entity objects/suzanne object");
+        scene::global().call("/compile");
 
         gui->position();
     }
@@ -83,23 +89,23 @@ class app : public application {
 
         scene::global().draw();
 
-        if (assets->has<type::program>("shader")) {            
+        if (assets->has<type::program>("shader")) {
             graphics->draw(*assets->get<type::entity>("object").object, assets->get<type::program>("shader"), graphics->perspective, pos);
         }
 
-        gui->draw();
+        //gui->draw();
         graphics->flush();
     }
 
     void on_interval() {
         scene::global().run();
-
+        
         if (assets->has<type::program>("shader") == false) {
             return;
         }
 
         pos.spin(std::get<double>(scene::global().get("rotation")));
-
+        return;
         auto& shader = assets->get<type::program>("shader");
         if (shader.compiled() == false) {
             graphics->compile(shader);

@@ -20,7 +20,6 @@
 		E70B33032898F7850008C3E1 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = E70B33022898F7850008C3E1 /* assets */; };
 		E70B33042898F7850008C3E1 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = E70B33022898F7850008C3E1 /* assets */; };
 		E742FF382897184200DEB2A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E742FF372897184200DEB2A6 /* AppDelegate.m */; };
-		E742FF3B2897184200DEB2A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E742FF3A2897184200DEB2A6 /* ViewController.m */; };
 		E742FF3D2897184200DEB2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E742FF3C2897184200DEB2A6 /* Assets.xcassets */; };
 		E742FF402897184200DEB2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E742FF3E2897184200DEB2A6 /* Main.storyboard */; };
 		E742FF422897184200DEB2A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E742FF412897184200DEB2A6 /* main.m */; };
@@ -44,6 +43,8 @@
 		E7604388289738BF00B53612 /* android.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7604370289738BF00B53612 /* android.cpp */; };
 		E7604389289738BF00B53612 /* openal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7604371289738BF00B53612 /* openal.cpp */; };
 		E760438A289738BF00B53612 /* openal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7604371289738BF00B53612 /* openal.cpp */; };
+		E76B82F428A0D760004BDC85 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76B82F328A0D760004BDC85 /* OpenAL.framework */; };
+		E76B82F628A0F116004BDC85 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E76B82F528A0F116004BDC85 /* ViewController.mm */; };
 		E7A20D0628965B360086754E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A20D0528965B360086754E /* AppDelegate.m */; };
 		E7A20D0928965B360086754E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A20D0828965B360086754E /* SceneDelegate.m */; };
 		E7A20D0F28965B360086754E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A20D0D28965B360086754E /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 		E7A20D1728965B370086754E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A20D1628965B370086754E /* main.m */; };
 		E7DF08BB2896EA35000873FC /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7DF08BA2896EA35000873FC /* ViewController.mm */; };
 		E7DF08C22897016E000873FC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DF08C12897016E000873FC /* GLKit.framework */; };
+		E7E69711289FAA2100BD93DA /* Example.vcxitems in Resources */ = {isa = PBXBuildFile; fileRef = E7E69710289FAA2100BD93DA /* Example.vcxitems */; };
+		E7E69712289FAA2100BD93DA /* Example.vcxitems in Resources */ = {isa = PBXBuildFile; fileRef = E7E69710289FAA2100BD93DA /* Example.vcxitems */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,13 +71,10 @@
 		E70B32AC2898860C0008C3E1 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		E70B32FD2898E2F80008C3E1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E70B33022898F7850008C3E1 /* assets */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = assets; sourceTree = SOURCE_ROOT; };
-		E734C89B289B845700628705 /* application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = application.hpp; sourceTree = "<group>"; };
-		E734C89C289B845700628705 /* console.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = console.hpp; sourceTree = "<group>"; };
 		E742FF342897184200DEB2A6 /* macos-client.Executable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macos-client.Executable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E742FF362897184200DEB2A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E742FF372897184200DEB2A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E742FF392897184200DEB2A6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E742FF3A2897184200DEB2A6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E742FF3C2897184200DEB2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E742FF3F2897184200DEB2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E742FF412897184200DEB2A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -127,6 +127,8 @@
 		E760437B289738BF00B53612 /* input.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = input.hpp; sourceTree = "<group>"; };
 		E760437C289738BF00B53612 /* assets.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = assets.hpp; sourceTree = "<group>"; };
 		E760438D2897392600B53612 /* engine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = engine.hpp; sourceTree = "<group>"; };
+		E76B82F328A0D760004BDC85 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
+		E76B82F528A0F116004BDC85 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		E7A20D0128965B360086754E /* ios-client.Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-client.Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A20D0428965B360086754E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7A20D0528965B360086754E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -140,6 +142,8 @@
 		E7A20D1628965B370086754E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7DF08BA2896EA35000873FC /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		E7DF08C12897016E000873FC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		E7E6970F289FAA2100BD93DA /* application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = application.hpp; sourceTree = "<group>"; };
+		E7E69710289FAA2100BD93DA /* Example.vcxitems */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Example.vcxitems; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76B82F428A0D760004BDC85 /* OpenAL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,22 +224,13 @@
 			path = "miniz-2.2.0";
 			sourceTree = "<group>";
 		};
-		E734C899289B845700628705 /* ShaderWerks */ = {
-			isa = PBXGroup;
-			children = (
-				E734C89B289B845700628705 /* application.hpp */,
-				E734C89C289B845700628705 /* console.hpp */,
-			);
-			path = ShaderWerks;
-			sourceTree = "<group>";
-		};
 		E742FF352897184200DEB2A6 /* macos-client.Executable */ = {
 			isa = PBXGroup;
 			children = (
+				E76B82F528A0F116004BDC85 /* ViewController.mm */,
 				E742FF362897184200DEB2A6 /* AppDelegate.h */,
 				E742FF372897184200DEB2A6 /* AppDelegate.m */,
 				E742FF392897184200DEB2A6 /* ViewController.h */,
-				E742FF3A2897184200DEB2A6 /* ViewController.m */,
 				E742FF3C2897184200DEB2A6 /* Assets.xcassets */,
 				E742FF3E2897184200DEB2A6 /* Main.storyboard */,
 				E742FF412897184200DEB2A6 /* main.m */,
@@ -361,7 +357,7 @@
 		E7A20CF828965B360086754E = {
 			isa = PBXGroup;
 			children = (
-				E734C899289B845700628705 /* ShaderWerks */,
+				E7E6970E289FAA2100BD93DA /* Example */,
 				E702359F289767B100121606 /* deps */,
 				E760431B28971BFE00B53612 /* engine */,
 				E7A20D0328965B360086754E /* ios-client.Application */,
@@ -403,11 +399,21 @@
 		E7DF08C02897016E000873FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E76B82F328A0D760004BDC85 /* OpenAL.framework */,
 				E70B32FD2898E2F80008C3E1 /* OpenGLES.framework */,
 				E70B32AC2898860C0008C3E1 /* OpenAL.framework */,
 				E7DF08C12897016E000873FC /* GLKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7E6970E289FAA2100BD93DA /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				E7E6970F289FAA2100BD93DA /* application.hpp */,
+				E7E69710289FAA2100BD93DA /* Example.vcxitems */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E70B33042898F7850008C3E1 /* assets in Resources */,
+				E7E69712289FAA2100BD93DA /* Example.vcxitems in Resources */,
 				E742FF3D2897184200DEB2A6 /* Assets.xcassets in Resources */,
 				E742FF402897184200DEB2A6 /* Main.storyboard in Resources */,
 			);
@@ -503,6 +510,7 @@
 				E70B33032898F7850008C3E1 /* assets in Resources */,
 				E7A20D1128965B370086754E /* Assets.xcassets in Resources */,
 				E7A20D0F28965B360086754E /* Main.storyboard in Resources */,
+				E7E69711289FAA2100BD93DA /* Example.vcxitems in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,8 +545,8 @@
 				E7023CF2289767B300121606 /* lodepng.cpp in Sources */,
 				E7604382289738BF00B53612 /* opengl.cpp in Sources */,
 				E7604347289738A900B53612 /* common.cpp in Sources */,
-				E742FF3B2897184200DEB2A6 /* ViewController.m in Sources */,
 				E760434D289738A900B53612 /* properties.cpp in Sources */,
+				E76B82F628A0F116004BDC85 /* ViewController.mm in Sources */,
 				E742FF422897184200DEB2A6 /* main.m in Sources */,
 				E742FF382897184200DEB2A6 /* AppDelegate.m in Sources */,
 				E7604380289738BF00B53612 /* posix.cpp in Sources */,
@@ -613,13 +621,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "macos-client.Executable/macos_client_Executable.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "template/src/client/macos-client.Executable/macos_client_Executable.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7CBXX6XR6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = template/deps;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -629,8 +639,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "template.macos-client-Executable";
+				PRODUCT_BUNDLE_IDENTIFIER = template.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -641,13 +652,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "macos-client.Executable/macos_client_Executable.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "template/src/client/macos-client.Executable/macos_client_Executable.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7CBXX6XR6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = template/deps;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -657,8 +670,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "template.macos-client-Executable";
+				PRODUCT_BUNDLE_IDENTIFIER = template.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -802,7 +816,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "template.ios-client";
+				PRODUCT_BUNDLE_IDENTIFIER = template.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -834,7 +848,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "template.ios-client";
+				PRODUCT_BUNDLE_IDENTIFIER = template.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

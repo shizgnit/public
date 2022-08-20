@@ -92,7 +92,7 @@ Global
 		ShaderWerks\ShaderWerks.vcxitems*{1c793cfd-7c8e-45c8-9087-96d5bf650155}*SharedItemsImports = 9
 		Example\Example.vcxitems*{b99e6339-699b-4076-9859-749b394d2690}*SharedItemsImports = 4
 		template\src\engine\universal-engine.vcxitems*{b99e6339-699b-4076-9859-749b394d2690}*SharedItemsImports = 4
-		ShaderWerks\ShaderWerks.vcxitems*{bf3f4a78-38ac-41d9-82b9-b985399afd49}*SharedItemsImports = 4
+		Example\Example.vcxitems*{bf3f4a78-38ac-41d9-82b9-b985399afd49}*SharedItemsImports = 4
 		template\src\engine\universal-engine.vcxitems*{bf3f4a78-38ac-41d9-82b9-b985399afd49}*SharedItemsImports = 4
 		template\src\engine\universal-engine.vcxitems*{ca2a1cb3-e76d-4a44-9c44-0b5eb0426cf0}*SharedItemsImports = 9
 	EndGlobalSection

@@ -39,7 +39,7 @@ public:
     };
 
     bool load() {
-        scene::global().call("/load shader shaders/basic gui");
+        scene::global().call("/load shader basic gui");
         scene::global().call("/load font fonts/consolas-22 default");
         scene::global().call("/compile");
 

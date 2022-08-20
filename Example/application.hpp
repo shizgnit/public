@@ -58,9 +58,49 @@ namespace MathHelper
         return Matrix4(cotangent / aspectRatio, 0.0f, 0.0f, 0.0f,
             0.0f, cotangent, 0.0f, 0.0f,
             0.0f, 0.0f, -50.0f / (50.0f - 1.0f), (-50.0f * 1.0f) / (50.0f - 1.0f),
-            0.0f, 0.0f, -1.0f, 0.0f);
+            0.0f, 0.0f, -1.0f, 1.0f);
     }
 }
+
+
+static GLfloat vertexPositionsExplicit[] = {
+    -1.0f, -1.0f, -1.0f, 1.0,
+    -1.0f, -1.0f,  1.0f, 1.0,
+    -1.0f,  1.0f,  1.0f, 1.0,
+     1.0f,  1.0f, -1.0f, 1.0,
+    -1.0f, -1.0f, -1.0f, 1.0,
+    -1.0f,  1.0f, -1.0f, 1.0,
+     1.0f, -1.0f,  1.0f, 1.0,
+    -1.0f, -1.0f, -1.0f, 1.0,
+     1.0f, -1.0f, -1.0f, 1.0,
+     1.0f,  1.0f, -1.0f, 1.0,
+     1.0f, -1.0f, -1.0f, 1.0,
+    -1.0f, -1.0f, -1.0f, 1.0,
+    -1.0f, -1.0f, -1.0f, 1.0,
+    -1.0f,  1.0f,  1.0f, 1.0,
+    -1.0f,  1.0f, -1.0f, 1.0,
+     1.0f, -1.0f,  1.0f, 1.0,
+    -1.0f, -1.0f,  1.0f, 1.0,
+    -1.0f, -1.0f, -1.0f, 1.0,
+    -1.0f,  1.0f,  1.0f, 1.0,
+    -1.0f, -1.0f,  1.0f, 1.0,
+     1.0f, -1.0f,  1.0f, 1.0,
+     1.0f,  1.0f,  1.0f, 1.0,
+     1.0f, -1.0f, -1.0f, 1.0,
+     1.0f,  1.0f, -1.0f, 1.0,
+     1.0f, -1.0f, -1.0f, 1.0,
+     1.0f,  1.0f,  1.0f, 1.0,
+     1.0f, -1.0f,  1.0f, 1.0,
+     1.0f,  1.0f,  1.0f, 1.0,
+     1.0f,  1.0f, -1.0f, 1.0,
+    -1.0f,  1.0f, -1.0f, 1.0,
+     1.0f,  1.0f,  1.0f, 1.0,
+    -1.0f,  1.0f, -1.0f, 1.0,
+    -1.0f,  1.0f,  1.0f, 1.0,
+     1.0f,  1.0f,  1.0f, 1.0,
+    -1.0f,  1.0f,  1.0f, 1.0,
+     1.0f, -1.0f,  1.0f, 1.0
+};
 
 class app : public application {
     GLuint CompileShader(GLenum type, const std::string& source)
@@ -142,12 +182,13 @@ class app : public application {
     void on_startup() {
         // Vertex Shader source
         const std::string vs = R"(
+            #version 300 es
             uniform mat4 uModelMatrix;
             uniform mat4 uViewMatrix;
             uniform mat4 uProjMatrix;
-            attribute vec4 aPosition;
-            attribute vec4 aColor;
-            varying vec4 vColor;
+            in vec4 aPosition;
+            in vec4 aColor;
+            out vec4 vColor;
             void main()
             {
                 gl_Position = uProjMatrix * uViewMatrix * uModelMatrix * aPosition;
@@ -157,11 +198,14 @@ class app : public application {
 
         // Fragment Shader source
         const std::string fs = R"(
-            precision mediump float;
-            varying vec4 vColor;
+            #version 300 es
+            precision highp float;
+            in vec4 vColor;
+            
+            out vec4 diffuseColor;
             void main()
             {
-                gl_FragColor = vColor;
+                diffuseColor = vColor;
             }
         )";
 
@@ -176,30 +220,34 @@ class app : public application {
         // Then set up the cube geometry.
         GLfloat vertexPositions[] =
         {
-            -1.0f, -1.0f, -1.0f,
-            -1.0f, -1.0f,  1.0f,
-            -1.0f,  1.0f, -1.0f,
-            -1.0f,  1.0f,  1.0f,
-             1.0f, -1.0f, -1.0f,
-             1.0f, -1.0f,  1.0f,
-             1.0f,  1.0f, -1.0f,
-             1.0f,  1.0f,  1.0f,
+            -1.0f, -1.0f, -1.0f, 1.0f, // 0
+            -1.0f, -1.0f,  1.0f, 1.0f, // 1
+            -1.0f,  1.0f, -1.0f, 1.0f, // 2
+            -1.0f,  1.0f,  1.0f, 1.0f, // 3
+             1.0f, -1.0f, -1.0f, 1.0f, // 4
+             1.0f, -1.0f,  1.0f, 1.0f, // 5
+             1.0f,  1.0f, -1.0f, 1.0f, // 6
+             1.0f,  1.0f,  1.0f, 1.0f, // 7
         };
 
+        
+        auto size = sizeof(vertexPositionsExplicit);
+        auto elements = size / 36;
+        
         glGenBuffers(1, &mVertexPositionBuffer);
         glBindBuffer(GL_ARRAY_BUFFER, mVertexPositionBuffer);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertexPositions), vertexPositions, GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vertexPositionsExplicit), vertexPositionsExplicit, GL_STATIC_DRAW);
 
         GLfloat vertexColors[] =
         {
-            0.0f, 0.0f, 0.0f,
-            0.0f, 0.0f, 1.0f,
-            0.0f, 1.0f, 0.0f,
-            0.0f, 1.0f, 1.0f,
-            1.0f, 0.0f, 0.0f,
-            1.0f, 0.0f, 1.0f,
-            1.0f, 1.0f, 0.0f,
-            1.0f, 1.0f, 1.0f,
+            0.0f, 0.0f, 0.0f, 1.0f, // 0
+            0.0f, 0.0f, 1.0f, 1.0f, // 1
+            0.0f, 1.0f, 0.0f, 1.0f, // 2
+            0.0f, 1.0f, 1.0f, 1.0f, // 3
+            1.0f, 0.0f, 0.0f, 1.0f, // 4
+            1.0f, 0.0f, 1.0f, 1.0f, // 5
+            1.0f, 1.0f, 0.0f, 1.0f, // 6
+            1.0f, 1.0f, 1.0f, 1.0f, // 7
         };
 
         glGenBuffers(1, &mVertexColorBuffer);
@@ -233,9 +281,6 @@ class app : public application {
     }
 
     void on_resize() {
-        glViewport(0, 0, width, height);
-        mWindowWidth = width;
-        mWindowHeight = height;
     }
 
     void on_draw() {
@@ -249,11 +294,11 @@ class app : public application {
 
         glBindBuffer(GL_ARRAY_BUFFER, mVertexPositionBuffer);
         glEnableVertexAttribArray(mPositionAttribLocation);
-        glVertexAttribPointer(mPositionAttribLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
+        glVertexAttribPointer(mPositionAttribLocation, 4, GL_FLOAT, GL_FALSE, 16, 0);
 
         glBindBuffer(GL_ARRAY_BUFFER, mVertexColorBuffer);
         glEnableVertexAttribArray(mColorAttribLocation);
-        glVertexAttribPointer(mColorAttribLocation, 3, GL_FLOAT, GL_FALSE, 0, 0);
+        glVertexAttribPointer(mColorAttribLocation, 4, GL_FLOAT, GL_FALSE, 0, 0);
 
         MathHelper::Matrix4 modelMatrix = MathHelper::SimpleModelMatrix((float)mDrawCount / 50.0f);
         glUniformMatrix4fv(mModelUniformLocation, 1, GL_FALSE, &(modelMatrix.m[0][0]));
@@ -261,12 +306,15 @@ class app : public application {
         MathHelper::Matrix4 viewMatrix = MathHelper::SimpleViewMatrix();
         glUniformMatrix4fv(mViewUniformLocation, 1, GL_FALSE, &(viewMatrix.m[0][0]));
 
-        MathHelper::Matrix4 projectionMatrix = MathHelper::SimpleProjectionMatrix(float(mWindowWidth) / float(mWindowHeight));
+        MathHelper::Matrix4 projectionMatrix = MathHelper::SimpleProjectionMatrix(float(width) / float(height));
         glUniformMatrix4fv(mProjUniformLocation, 1, GL_FALSE, &(projectionMatrix.m[0][0]));
 
         // Draw 36 indices: six faces, two triangles per face, 3 indices per triangle
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mIndexBuffer);
-        glDrawElements(GL_TRIANGLES, (6 * 2) * 3, GL_UNSIGNED_SHORT, 0);
+        //glDrawElements(GL_TRIANGLES, (6 * 2) * 4, GL_UNSIGNED_SHORT, 0);
+        
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        //glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, 0);
 
         glFlush();
 
@@ -274,8 +322,6 @@ class app : public application {
     }
 
     GLuint mProgram;
-    GLsizei mWindowWidth;
-    GLsizei mWindowHeight;
 
     GLint mPositionAttribLocation;
     GLint mColorAttribLocation;

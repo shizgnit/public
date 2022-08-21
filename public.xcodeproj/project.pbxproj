@@ -55,8 +55,6 @@
 		E7DD358528ADE2F00064E8D0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7DD358328ADE1DF0064E8D0 /* main.cpp */; };
 		E7DF08BB2896EA35000873FC /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7DF08BA2896EA35000873FC /* ViewController.mm */; };
 		E7DF08C22897016E000873FC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DF08C12897016E000873FC /* GLKit.framework */; };
-		E7E69711289FAA2100BD93DA /* Example.vcxitems in Resources */ = {isa = PBXBuildFile; fileRef = E7E69710289FAA2100BD93DA /* Example.vcxitems */; };
-		E7E69712289FAA2100BD93DA /* Example.vcxitems in Resources */ = {isa = PBXBuildFile; fileRef = E7E69710289FAA2100BD93DA /* Example.vcxitems */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,11 +137,12 @@
 		E7A20D1328965B370086754E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7A20D1528965B370086754E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A20D1628965B370086754E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7B3C6B528B1F34600D3D718 /* metal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = metal.hpp; sourceTree = "<group>"; };
 		E7DD358328ADE1DF0064E8D0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E7DF08BA2896EA35000873FC /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		E7DF08C12897016E000873FC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		E7E6970F289FAA2100BD93DA /* application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = application.hpp; sourceTree = "<group>"; };
-		E7E69710289FAA2100BD93DA /* Example.vcxitems */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Example.vcxitems; sourceTree = "<group>"; };
+		E7FB43D028B18C16007BA0B6 /* application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = application.hpp; sourceTree = "<group>"; };
+		E7FB43D128B18C16007BA0B6 /* console.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = console.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +275,7 @@
 		E760434F289738B400B53612 /* formats */ = {
 			isa = PBXGroup;
 			children = (
+				E7B3C6B528B1F34600D3D718 /* metal.hpp */,
 				E7604350289738B400B53612 /* fnt.hpp */,
 				E7604351289738B400B53612 /* wav.hpp */,
 				E7604352289738B400B53612 /* tga.hpp */,
@@ -355,7 +355,7 @@
 		E7A20CF828965B360086754E = {
 			isa = PBXGroup;
 			children = (
-				E7E6970E289FAA2100BD93DA /* Example */,
+				E7FB43CE28B18C16007BA0B6 /* ShaderWerks */,
 				E702359F289767B100121606 /* deps */,
 				E760431B28971BFE00B53612 /* engine */,
 				E7A20D0328965B360086754E /* ios-client.Application */,
@@ -408,13 +408,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E7E6970E289FAA2100BD93DA /* Example */ = {
+		E7FB43CE28B18C16007BA0B6 /* ShaderWerks */ = {
 			isa = PBXGroup;
 			children = (
-				E7E6970F289FAA2100BD93DA /* application.hpp */,
-				E7E69710289FAA2100BD93DA /* Example.vcxitems */,
+				E7FB43D028B18C16007BA0B6 /* application.hpp */,
+				E7FB43D128B18C16007BA0B6 /* console.hpp */,
 			);
-			path = Example;
+			path = ShaderWerks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,7 +497,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E70B33042898F7850008C3E1 /* assets in Resources */,
-				E7E69712289FAA2100BD93DA /* Example.vcxitems in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +508,6 @@
 				E70B33032898F7850008C3E1 /* assets in Resources */,
 				E7A20D1128965B370086754E /* Assets.xcassets in Resources */,
 				E7A20D0F28965B360086754E /* Main.storyboard in Resources */,
-				E7E69711289FAA2100BD93DA /* Example.vcxitems in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

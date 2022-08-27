@@ -18,7 +18,6 @@
 		E70B32AD2898860C0008C3E1 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70B32AC2898860C0008C3E1 /* OpenAL.framework */; };
 		E70B32FE2898E2F80008C3E1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70B32FD2898E2F80008C3E1 /* OpenGLES.framework */; };
 		E70B33032898F7850008C3E1 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = E70B33022898F7850008C3E1 /* assets */; };
-		E70B33042898F7850008C3E1 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = E70B33022898F7850008C3E1 /* assets */; };
 		E7604346289738A900B53612 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E760433D289738A900B53612 /* common.cpp */; };
 		E7604347289738A900B53612 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E760433D289738A900B53612 /* common.cpp */; };
 		E7604348289738A900B53612 /* spatial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E760433E289738A900B53612 /* spatial.cpp */; };
@@ -51,7 +50,9 @@
 		E7A20D1128965B370086754E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A20D1028965B370086754E /* Assets.xcassets */; };
 		E7A20D1428965B370086754E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A20D1228965B370086754E /* LaunchScreen.storyboard */; };
 		E7A20D1728965B370086754E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A20D1628965B370086754E /* main.m */; };
-		E7DD358428ADE1DF0064E8D0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7DD358328ADE1DF0064E8D0 /* main.cpp */; };
+		E7BF2AB828B55D6400175FF4 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = E7BF2AB728B55D6400175FF4 /* assets */; };
+		E7BF2ABB28B5701200175FF4 /* macos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7BF2ABA28B5701200175FF4 /* macos.cpp */; };
+		E7BF2ABC28B5701200175FF4 /* macos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7BF2ABA28B5701200175FF4 /* macos.cpp */; };
 		E7DD358528ADE2F00064E8D0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7DD358328ADE1DF0064E8D0 /* main.cpp */; };
 		E7DF08BB2896EA35000873FC /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7DF08BA2896EA35000873FC /* ViewController.mm */; };
 		E7DF08C22897016E000873FC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DF08C12897016E000873FC /* GLKit.framework */; };
@@ -94,7 +95,6 @@
 		E760435B289738B400B53612 /* info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = info.hpp; sourceTree = "<group>"; };
 		E760435C289738B400B53612 /* object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = object.hpp; sourceTree = "<group>"; };
 		E760435D289738B400B53612 /* font.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = font.hpp; sourceTree = "<group>"; };
-		E760435E289738B400B53612 /* audio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = audio.hpp; sourceTree = "<group>"; };
 		E760435F289738B400B53612 /* shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = shader.hpp; sourceTree = "<group>"; };
 		E7604360289738B400B53612 /* program.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = program.hpp; sourceTree = "<group>"; };
 		E7604361289738B400B53612 /* image.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = image.hpp; sourceTree = "<group>"; };
@@ -138,6 +138,10 @@
 		E7A20D1528965B370086754E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A20D1628965B370086754E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7B3C6B528B1F34600D3D718 /* metal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = metal.hpp; sourceTree = "<group>"; };
+		E7B7B58B28B2E4FB00D0148D /* sound.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sound.hpp; sourceTree = "<group>"; };
+		E7BF2AB728B55D6400175FF4 /* assets */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = assets; sourceTree = SOURCE_ROOT; };
+		E7BF2AB928B5701200175FF4 /* macos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = macos.hpp; sourceTree = "<group>"; };
+		E7BF2ABA28B5701200175FF4 /* macos.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = macos.cpp; sourceTree = "<group>"; };
 		E7DD358328ADE1DF0064E8D0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E7DF08BA2896EA35000873FC /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		E7DF08C12897016E000873FC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -229,6 +233,7 @@
 		E742FF352897184200DEB2A6 /* macos-client.Executable */ = {
 			isa = PBXGroup;
 			children = (
+				E7BF2AB728B55D6400175FF4 /* assets */,
 				E7DD358328ADE1DF0064E8D0 /* main.cpp */,
 			);
 			name = "macos-client.Executable";
@@ -292,11 +297,11 @@
 		E7604359289738B400B53612 /* interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				E7B7B58B28B2E4FB00D0148D /* sound.hpp */,
 				E760435A289738B400B53612 /* material.hpp */,
 				E760435B289738B400B53612 /* info.hpp */,
 				E760435C289738B400B53612 /* object.hpp */,
 				E760435D289738B400B53612 /* font.hpp */,
-				E760435E289738B400B53612 /* audio.hpp */,
 				E760435F289738B400B53612 /* shader.hpp */,
 				E7604360289738B400B53612 /* program.hpp */,
 				E7604361289738B400B53612 /* image.hpp */,
@@ -317,6 +322,8 @@
 		E7604364289738BF00B53612 /* implementations */ = {
 			isa = PBXGroup;
 			children = (
+				E7BF2ABA28B5701200175FF4 /* macos.cpp */,
+				E7BF2AB928B5701200175FF4 /* macos.hpp */,
 				E785877F28AB5C0C0047822F /* metal.cpp */,
 				E785877E28AB5C0C0047822F /* metal.hpp */,
 				E70B32A928986AE70008C3E1 /* ios.hpp */,
@@ -496,7 +503,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70B33042898F7850008C3E1 /* assets in Resources */,
+				E7BF2AB828B55D6400175FF4 /* assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +547,7 @@
 			files = (
 				E7DD358528ADE2F00064E8D0 /* main.cpp in Sources */,
 				E760438A289738BF00B53612 /* openal.cpp in Sources */,
+				E7BF2ABC28B5701200175FF4 /* macos.cpp in Sources */,
 				E7023CF2289767B300121606 /* lodepng.cpp in Sources */,
 				E7604382289738BF00B53612 /* opengl.cpp in Sources */,
 				E7604347289738A900B53612 /* common.cpp in Sources */,
@@ -578,8 +586,8 @@
 				E7604348289738A900B53612 /* spatial.cpp in Sources */,
 				E760437F289738BF00B53612 /* posix.cpp in Sources */,
 				E7604387289738BF00B53612 /* android.cpp in Sources */,
+				E7BF2ABB28B5701200175FF4 /* macos.cpp in Sources */,
 				E760434C289738A900B53612 /* properties.cpp in Sources */,
-				E7DD358428ADE1DF0064E8D0 /* main.cpp in Sources */,
 				E7A20D0928965B360086754E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -800,7 +808,11 @@
 					"$(inherited)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "\"${SRCROOT}/template/deps\"";
+				HEADER_SEARCH_PATHS = (
+					template/deps,
+					"template/deps/metal-cpp",
+					"template/deps/metal-cpp-extensions",
+				);
 				INFOPLIST_FILE = "template/src/client/ios-client.Application/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -832,7 +844,11 @@
 				DEVELOPMENT_TEAM = X7CBXX6XR6;
 				GCC_PREPROCESSOR_DEFINITIONS = "GLES_SILENCE_DEPRECATION=1";
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "\"${SRCROOT}/template/deps\"";
+				HEADER_SEARCH_PATHS = (
+					template/deps,
+					"template/deps/metal-cpp",
+					"template/deps/metal-cpp-extensions",
+				);
 				INFOPLIST_FILE = "template/src/client/ios-client.Application/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

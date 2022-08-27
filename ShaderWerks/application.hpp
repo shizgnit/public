@@ -2,7 +2,7 @@
 
 //#include "engine.hpp"
 
-#include "console.hpp"
+//#include "console.hpp"
 
 class app : public application {
 
@@ -49,7 +49,7 @@ class app : public application {
         input->handler(platform::input::KEY, platform::input::DOWN, [](const platform::input::event& ev) { scene::global().keyboard_input(ev); }, 0);
         input->handler(platform::input::KEY, platform::input::UP, [](const platform::input::event& ev) { scene::global().keyboard_input(ev); }, 0);
 
-        scene::global().add("debug", new console());
+        //scene::global().add("debug", new console());
         
         // Just to avoid having to do keyboard input on ios for now
         scene::global().toggle("debug");
@@ -65,7 +65,7 @@ class app : public application {
 
         //scene::global().call("/load shader shaders/basic shader");
         //scene::global().call("/compile");
-        scene::global().call("/load shader shaders/basic shader");
+        scene::global().call("/load shader basic shader");
         scene::global().call("/load entity objects/suzanne object");
         scene::global().call("/compile");
 
@@ -177,13 +177,13 @@ class app : public application {
             auto fragment_define = definition(shader.fragment.text, parameter);
 
             if (vertex_define.empty() == false) {
-                console::trace() << vertex_define << " *** vertex location missing ***";
+                //console::trace() << vertex_define << " *** vertex location missing ***";
             }
             else if (fragment_define.empty() == false) {
-                console::trace() << fragment_define << " *** fragment location missing ***";
+                //console::trace() << fragment_define << " *** fragment location missing ***";
             }
             else {
-                console::trace() << vertex_define << " *** not defined ***";
+                //console::trace() << vertex_define << " *** not defined ***";
             }
 
             missing = true;

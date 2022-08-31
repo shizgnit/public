@@ -55,7 +55,7 @@ class app : public application {
         scene::global().toggle("debug");
 
         //scene::global().call("/load entity objects/suzanne object");
-        scene::global().call("/set position (0.0,-1.0,-2.0)");
+        scene::global().call("/set position (0.0,0.0,-10.0)");
         scene::global().call("/set rotation 0.2");
 
         scene::global().call("/set ambient.position (1.0,1.0,1.0)");
@@ -68,6 +68,8 @@ class app : public application {
         scene::global().call("/load shader basic shader");
         scene::global().call("/load entity objects/suzanne object");
         scene::global().call("/compile");
+
+        scene::global().call("/play object static");
 
         gui->position();
     }
@@ -90,7 +92,8 @@ class app : public application {
         scene::global().draw();
 
         if (assets->has<type::program>("shader")) {
-            graphics->draw(*assets->get<type::entity>("object").object, assets->get<type::program>("shader"), graphics->perspective, pos);
+            assets->get<type::entity>("object").getInstance().position.reposition({0.0f, 0.0f, -10.0f});
+            graphics->draw(assets->get<type::entity>("object"), assets->get<type::program>("shader"), graphics->perspective, pos);
         }
 
         //gui->draw();
@@ -105,6 +108,8 @@ class app : public application {
         }
 
         pos.spin(std::get<double>(scene::global().get("rotation")));
+        //pos.surge(0.1f);
+        
         return;
         auto& shader = assets->get<type::program>("shader");
         if (shader.compiled() == false) {

@@ -67,9 +67,10 @@ class app : public application {
         //scene::global().call("/compile");
         scene::global().call("/load shader basic shader");
         scene::global().call("/load entity objects/suzanne object");
-        scene::global().call("/play object static");
+        
         scene::global().call("/compile");
-
+        
+        scene::global().call("/play object static");
 
         gui->position();
     }
@@ -92,7 +93,7 @@ class app : public application {
         scene::global().draw();
 
         if (assets->has<type::program>("shader")) {
-            //assets->get<type::entity>("object").getInstance().position.reposition({0.0f, 0.0f, -10.0f});
+            assets->get<type::entity>("object").getInstance().position.reposition({0.0f, 0.0f, -10.0f});
             graphics->draw(assets->get<type::entity>("object"), assets->get<type::program>("shader"), graphics->perspective, pos);
         }
 

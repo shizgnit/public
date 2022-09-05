@@ -62,46 +62,6 @@ namespace MathHelper
     }
 }
 
-
-static GLfloat vertexPositionsExplicit[] = {
-    -1.0f, -1.0f, -1.0f, 1.0,
-    -1.0f, -1.0f,  1.0f, 1.0,
-    -1.0f,  1.0f,  1.0f, 1.0,
-     1.0f,  1.0f, -1.0f, 1.0,
-    -1.0f, -1.0f, -1.0f, 1.0,
-    -1.0f,  1.0f, -1.0f, 1.0,
-     1.0f, -1.0f,  1.0f, 1.0,
-    -1.0f, -1.0f, -1.0f, 1.0,
-     1.0f, -1.0f, -1.0f, 1.0,
-     1.0f,  1.0f, -1.0f, 1.0,
-     1.0f, -1.0f, -1.0f, 1.0,
-    -1.0f, -1.0f, -1.0f, 1.0,
-    -1.0f, -1.0f, -1.0f, 1.0,
-    -1.0f,  1.0f,  1.0f, 1.0,
-    -1.0f,  1.0f, -1.0f, 1.0,
-     1.0f, -1.0f,  1.0f, 1.0,
-    -1.0f, -1.0f,  1.0f, 1.0,
-    -1.0f, -1.0f, -1.0f, 1.0,
-    -1.0f,  1.0f,  1.0f, 1.0,
-    -1.0f, -1.0f,  1.0f, 1.0,
-     1.0f, -1.0f,  1.0f, 1.0,
-     1.0f,  1.0f,  1.0f, 1.0,
-     1.0f, -1.0f, -1.0f, 1.0,
-     1.0f,  1.0f, -1.0f, 1.0,
-     1.0f, -1.0f, -1.0f, 1.0,
-     1.0f,  1.0f,  1.0f, 1.0,
-     1.0f, -1.0f,  1.0f, 1.0,
-     1.0f,  1.0f,  1.0f, 1.0,
-     1.0f,  1.0f, -1.0f, 1.0,
-    -1.0f,  1.0f, -1.0f, 1.0,
-     1.0f,  1.0f,  1.0f, 1.0,
-    -1.0f,  1.0f, -1.0f, 1.0,
-    -1.0f,  1.0f,  1.0f, 1.0,
-     1.0f,  1.0f,  1.0f, 1.0,
-    -1.0f,  1.0f,  1.0f, 1.0,
-     1.0f, -1.0f,  1.0f, 1.0
-};
-
 class app : public application {
     GLuint CompileShader(GLenum type, const std::string& source)
     {
@@ -182,30 +142,28 @@ class app : public application {
     void on_startup() {
         // Vertex Shader source
         const std::string vs = R"(
-            #version 300 es
             uniform mat4 uModelMatrix;
             uniform mat4 uViewMatrix;
             uniform mat4 uProjMatrix;
-            in vec4 aPosition;
-            in vec4 aColor;
-            out vec4 vColor;
+            attribute vec4 aPosition;
+            attribute vec4 aColor;
+            varying vec4 vColor;
             void main()
             {
                 gl_Position = uProjMatrix * uViewMatrix * uModelMatrix * aPosition;
-                vColor = aColor;
+                vColor = uProjMatrix * uViewMatrix * uModelMatrix * aPosition;
             }
         )";
 
         // Fragment Shader source
         const std::string fs = R"(
-            #version 300 es
+            #ifdef GL_ES
             precision highp float;
-            in vec4 vColor;
-            
-            out vec4 diffuseColor;
+            #endif
+            varying vec4 vColor;
             void main()
             {
-                diffuseColor = vColor;
+                gl_FragColor = vec4(clamp(vColor.r, 0.0, 1.0), clamp(vColor.g, 0.0, 1.0), clamp(vColor.b, 0.0, 1.0), 1.0);
             }
         )";
 
@@ -218,21 +176,46 @@ class app : public application {
         mProjUniformLocation = glGetUniformLocation(mProgram, "uProjMatrix");
 
         // Then set up the cube geometry.
-        GLfloat vertexPositions[] =
-        {
-            -1.0f, -1.0f, -1.0f, 1.0f, // 0
-            -1.0f, -1.0f,  1.0f, 1.0f, // 1
-            -1.0f,  1.0f, -1.0f, 1.0f, // 2
-            -1.0f,  1.0f,  1.0f, 1.0f, // 3
-             1.0f, -1.0f, -1.0f, 1.0f, // 4
-             1.0f, -1.0f,  1.0f, 1.0f, // 5
-             1.0f,  1.0f, -1.0f, 1.0f, // 6
-             1.0f,  1.0f,  1.0f, 1.0f, // 7
+        GLfloat vertexPositionsExplicit[] = {
+            -1.0f, -1.0f, -1.0f, 1.0,
+            -1.0f, -1.0f,  1.0f, 1.0,
+            -1.0f,  1.0f,  1.0f, 1.0,
+             1.0f,  1.0f, -1.0f, 1.0,
+            -1.0f, -1.0f, -1.0f, 1.0,
+            -1.0f,  1.0f, -1.0f, 1.0,
+             1.0f, -1.0f,  1.0f, 1.0,
+            -1.0f, -1.0f, -1.0f, 1.0,
+             1.0f, -1.0f, -1.0f, 1.0,
+             1.0f,  1.0f, -1.0f, 1.0,
+             1.0f, -1.0f, -1.0f, 1.0,
+            -1.0f, -1.0f, -1.0f, 1.0,
+            -1.0f, -1.0f, -1.0f, 1.0,
+            -1.0f,  1.0f,  1.0f, 1.0,
+            -1.0f,  1.0f, -1.0f, 1.0,
+             1.0f, -1.0f,  1.0f, 1.0,
+            -1.0f, -1.0f,  1.0f, 1.0,
+            -1.0f, -1.0f, -1.0f, 1.0,
+            -1.0f,  1.0f,  1.0f, 1.0,
+            -1.0f, -1.0f,  1.0f, 1.0,
+             1.0f, -1.0f,  1.0f, 1.0,
+             1.0f,  1.0f,  1.0f, 1.0,
+             1.0f, -1.0f, -1.0f, 1.0,
+             1.0f,  1.0f, -1.0f, 1.0,
+             1.0f, -1.0f, -1.0f, 1.0,
+             1.0f,  1.0f,  1.0f, 1.0,
+             1.0f, -1.0f,  1.0f, 1.0,
+             1.0f,  1.0f,  1.0f, 1.0,
+             1.0f,  1.0f, -1.0f, 1.0,
+            -1.0f,  1.0f, -1.0f, 1.0,
+             1.0f,  1.0f,  1.0f, 1.0,
+            -1.0f,  1.0f, -1.0f, 1.0,
+            -1.0f,  1.0f,  1.0f, 1.0,
+             1.0f,  1.0f,  1.0f, 1.0,
+            -1.0f,  1.0f,  1.0f, 1.0,
+             1.0f, -1.0f,  1.0f, 1.0
         };
-
         
         auto size = sizeof(vertexPositionsExplicit);
-        auto elements = size / 36;
         
         glGenBuffers(1, &mVertexPositionBuffer);
         glBindBuffer(GL_ARRAY_BUFFER, mVertexPositionBuffer);
@@ -294,7 +277,7 @@ class app : public application {
 
         glBindBuffer(GL_ARRAY_BUFFER, mVertexPositionBuffer);
         glEnableVertexAttribArray(mPositionAttribLocation);
-        glVertexAttribPointer(mPositionAttribLocation, 4, GL_FLOAT, GL_FALSE, 16, 0);
+        glVertexAttribPointer(mPositionAttribLocation, 4, GL_FLOAT, GL_FALSE, 0, 0);
 
         glBindBuffer(GL_ARRAY_BUFFER, mVertexColorBuffer);
         glEnableVertexAttribArray(mColorAttribLocation);

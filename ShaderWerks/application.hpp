@@ -93,7 +93,7 @@ class app : public application {
         scene::global().draw();
 
         if (assets->has<type::program>("shader")) {
-            assets->get<type::entity>("object").getInstance().position.reposition({0.0f, 0.0f, -10.0f});
+            //assets->get<type::entity>("object").getInstance().position.reposition({0.0f, 0.0f, -10.0f});
             graphics->draw(assets->get<type::entity>("object"), assets->get<type::program>("shader"), graphics->perspective, pos);
         }
 

@@ -1,5 +1,7 @@
+#ifdef GL_ES
 precision mediump float;
 precision mediump int;
+#endif
 
 attribute mat4 a_ModelMatrix;
 attribute vec4 a_Vertex;

@@ -56,8 +56,8 @@
 		E7E3F9BA28C5D2710044451D /* Window.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E3F9B428C5D2700044451D /* Window.m */; };
 		E7E3F9BB28C5D2710044451D /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E3F9B628C5D2700044451D /* WindowController.m */; };
 		E7E3F9BC28C5D2710044451D /* View.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7E3F9B828C5D2700044451D /* View.mm */; };
-		E7E69711289FAA2100BD93DA /* Example.vcxitems in Resources */ = {isa = PBXBuildFile; fileRef = E7E69710289FAA2100BD93DA /* Example.vcxitems */; };
-		E7E69712289FAA2100BD93DA /* Example.vcxitems in Resources */ = {isa = PBXBuildFile; fileRef = E7E69710289FAA2100BD93DA /* Example.vcxitems */; };
+		E7E3F9CC28C695D10044451D /* ShaderWerks.vcxitems in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F9C928C695D10044451D /* ShaderWerks.vcxitems */; };
+		E7E3F9CD28C695D10044451D /* ShaderWerks.vcxitems in Resources */ = {isa = PBXBuildFile; fileRef = E7E3F9C928C695D10044451D /* ShaderWerks.vcxitems */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,8 +151,9 @@
 		E7E3F9B728C5D2700044451D /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		E7E3F9B828C5D2700044451D /* View.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = View.mm; sourceTree = "<group>"; };
 		E7E3F9B928C5D2700044451D /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
-		E7E6970F289FAA2100BD93DA /* application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = application.hpp; sourceTree = "<group>"; };
-		E7E69710289FAA2100BD93DA /* Example.vcxitems */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Example.vcxitems; sourceTree = "<group>"; };
+		E7E3F9C928C695D10044451D /* ShaderWerks.vcxitems */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ShaderWerks.vcxitems; sourceTree = "<group>"; };
+		E7E3F9CA28C695D10044451D /* application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = application.hpp; sourceTree = "<group>"; };
+		E7E3F9CB28C695D10044451D /* console.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = console.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,7 +373,7 @@
 		E7A20CF828965B360086754E = {
 			isa = PBXGroup;
 			children = (
-				E7E6970E289FAA2100BD93DA /* Example */,
+				E7E3F9C828C695D10044451D /* ShaderWerks */,
 				E702359F289767B100121606 /* deps */,
 				E760431B28971BFE00B53612 /* engine */,
 				E7A20D0328965B360086754E /* ios-client.Application */,
@@ -422,13 +423,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E7E6970E289FAA2100BD93DA /* Example */ = {
+		E7E3F9C828C695D10044451D /* ShaderWerks */ = {
 			isa = PBXGroup;
 			children = (
-				E7E6970F289FAA2100BD93DA /* application.hpp */,
-				E7E69710289FAA2100BD93DA /* Example.vcxitems */,
+				E7E3F9C928C695D10044451D /* ShaderWerks.vcxitems */,
+				E7E3F9CA28C695D10044451D /* application.hpp */,
+				E7E3F9CB28C695D10044451D /* console.hpp */,
 			);
-			path = Example;
+			path = ShaderWerks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,8 +512,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E3F9CD28C695D10044451D /* ShaderWerks.vcxitems in Resources */,
 				E70B33042898F7850008C3E1 /* assets in Resources */,
-				E7E69712289FAA2100BD93DA /* Example.vcxitems in Resources */,
 				E742FF3D2897184200DEB2A6 /* Assets.xcassets in Resources */,
 				E742FF402897184200DEB2A6 /* Main.storyboard in Resources */,
 			);
@@ -521,11 +523,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E3F9CC28C695D10044451D /* ShaderWerks.vcxitems in Resources */,
 				E7A20D1428965B370086754E /* LaunchScreen.storyboard in Resources */,
 				E70B33032898F7850008C3E1 /* assets in Resources */,
 				E7A20D1128965B370086754E /* Assets.xcassets in Resources */,
 				E7A20D0F28965B360086754E /* Main.storyboard in Resources */,
-				E7E69711289FAA2100BD93DA /* Example.vcxitems in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

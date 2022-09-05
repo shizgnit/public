@@ -1,7 +1,5 @@
 #pragma once
 
-//#include "engine.hpp"
-
 //#include "console.hpp"
 
 class app : public application {
@@ -54,8 +52,7 @@ class app : public application {
         // Just to avoid having to do keyboard input on ios for now
         scene::global().toggle("debug");
 
-        //scene::global().call("/load entity objects/suzanne object");
-        scene::global().call("/set position (0.0,0.0,-10.0)");
+        scene::global().call("/set position (0.0,0.0,-5.0)");
         scene::global().call("/set rotation 0.2");
 
         scene::global().call("/set ambient.position (1.0,1.0,1.0)");
@@ -63,8 +60,6 @@ class app : public application {
         scene::global().call("/set ambient.bias 0.2");
         scene::global().call("/set ambient.strength 1.0");
 
-        //scene::global().call("/load shader shaders/basic shader");
-        //scene::global().call("/compile");
         scene::global().call("/load shader basic shader");
         scene::global().call("/load entity objects/suzanne object");
         

@@ -1,5 +1,7 @@
+#ifdef GL_ES
 precision mediump float;
 precision mediump int;
+#endif
 
 uniform mat4 u_Parameters;
 

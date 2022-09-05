@@ -15,9 +15,13 @@
 		E70248482897684800121606 /* miniz.c in Sources */ = {isa = PBXBuildFile; fileRef = E702483B2897684800121606 /* miniz.c */; };
 		E70B32AA28986AE70008C3E1 /* ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E70B32A828986AE70008C3E1 /* ios.cpp */; };
 		E70B32AB28986AE70008C3E1 /* ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E70B32A828986AE70008C3E1 /* ios.cpp */; };
-		E70B32AD2898860C0008C3E1 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70B32AC2898860C0008C3E1 /* OpenAL.framework */; };
-		E70B32FE2898E2F80008C3E1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70B32FD2898E2F80008C3E1 /* OpenGLES.framework */; };
 		E70B33032898F7850008C3E1 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = E70B33022898F7850008C3E1 /* assets */; };
+		E75B906D28C493F500A0B0E0 /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = E75B906C28C493F500A0B0E0 /* Renderer.mm */; };
+		E75B907028C495AC00A0B0E0 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E75B906F28C495AC00A0B0E0 /* Shaders.metal */; };
+		E75B907228C52DEB00A0B0E0 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B907128C52DEB00A0B0E0 /* MetalKit.framework */; };
+		E75B907428C52DF500A0B0E0 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B907328C52DF500A0B0E0 /* Metal.framework */; };
+		E75B907528C52E1800A0B0E0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70B32AC2898860C0008C3E1 /* OpenAL.framework */; };
+		E75B907728C52E5B00A0B0E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B907628C52E5B00A0B0E0 /* Foundation.framework */; };
 		E7604346289738A900B53612 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E760433D289738A900B53612 /* common.cpp */; };
 		E7604347289738A900B53612 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E760433D289738A900B53612 /* common.cpp */; };
 		E7604348289738A900B53612 /* spatial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E760433E289738A900B53612 /* spatial.cpp */; };
@@ -55,7 +59,6 @@
 		E7BF2ABC28B5701200175FF4 /* macos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7BF2ABA28B5701200175FF4 /* macos.cpp */; };
 		E7DD358528ADE2F00064E8D0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7DD358328ADE1DF0064E8D0 /* main.cpp */; };
 		E7DF08BB2896EA35000873FC /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7DF08BA2896EA35000873FC /* ViewController.mm */; };
-		E7DF08C22897016E000873FC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DF08C12897016E000873FC /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,13 @@
 		E70B32FD2898E2F80008C3E1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E70B33022898F7850008C3E1 /* assets */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = assets; sourceTree = SOURCE_ROOT; };
 		E742FF342897184200DEB2A6 /* macos-client.Executable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macos-client.Executable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E75B906B28C493F500A0B0E0 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		E75B906C28C493F500A0B0E0 /* Renderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
+		E75B906E28C495AC00A0B0E0 /* ShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		E75B906F28C495AC00A0B0E0 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		E75B907128C52DEB00A0B0E0 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		E75B907328C52DF500A0B0E0 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		E75B907628C52E5B00A0B0E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E760433D289738A900B53612 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
 		E760433E289738A900B53612 /* spatial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spatial.cpp; sourceTree = "<group>"; };
 		E760433F289738A900B53612 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
@@ -165,9 +175,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70B32FE2898E2F80008C3E1 /* OpenGLES.framework in Frameworks */,
-				E70B32AD2898860C0008C3E1 /* OpenAL.framework in Frameworks */,
-				E7DF08C22897016E000873FC /* GLKit.framework in Frameworks */,
+				E75B907728C52E5B00A0B0E0 /* Foundation.framework in Frameworks */,
+				E75B907528C52E1800A0B0E0 /* OpenAL.framework in Frameworks */,
+				E75B907428C52DF500A0B0E0 /* Metal.framework in Frameworks */,
+				E75B907228C52DEB00A0B0E0 /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +395,11 @@
 		E7A20D0328965B360086754E /* ios-client.Application */ = {
 			isa = PBXGroup;
 			children = (
+				E75B906F28C495AC00A0B0E0 /* Shaders.metal */,
+				E75B906E28C495AC00A0B0E0 /* ShaderTypes.h */,
 				E70B33022898F7850008C3E1 /* assets */,
+				E75B906B28C493F500A0B0E0 /* Renderer.h */,
+				E75B906C28C493F500A0B0E0 /* Renderer.mm */,
 				E7A20D0428965B360086754E /* AppDelegate.h */,
 				E7A20D0528965B360086754E /* AppDelegate.m */,
 				E7A20D0728965B360086754E /* SceneDelegate.h */,
@@ -404,7 +419,10 @@
 		E7DF08C02897016E000873FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E75B907628C52E5B00A0B0E0 /* Foundation.framework */,
+				E75B907328C52DF500A0B0E0 /* Metal.framework */,
 				E7740B1828ACB5710004F69C /* MetalKit.framework */,
+				E75B907128C52DEB00A0B0E0 /* MetalKit.framework */,
 				E7740B1628ACB55E0004F69C /* Metal.framework */,
 				E7740B1428ACB5530004F69C /* Foundation.framework */,
 				E76B82F328A0D760004BDC85 /* OpenAL.framework */,
@@ -571,11 +589,13 @@
 			files = (
 				E7604381289738BF00B53612 /* opengl.cpp in Sources */,
 				E785878028AB5C0C0047822F /* metal.cpp in Sources */,
+				E75B906D28C493F500A0B0E0 /* Renderer.mm in Sources */,
 				E760434A289738A900B53612 /* scene.cpp in Sources */,
 				E7DF08BB2896EA35000873FC /* ViewController.mm in Sources */,
 				E70248472897684800121606 /* miniz.c in Sources */,
 				E7604385289738BF00B53612 /* universal.cpp in Sources */,
 				E7A20D0628965B360086754E /* AppDelegate.m in Sources */,
+				E75B907028C495AC00A0B0E0 /* Shaders.metal in Sources */,
 				E7A20D1728965B370086754E /* main.m in Sources */,
 				E7023CF1289767B300121606 /* lodepng.cpp in Sources */,
 				E760437D289738BF00B53612 /* windows.cpp in Sources */,
@@ -822,7 +842,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -858,7 +878,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(inherited)";

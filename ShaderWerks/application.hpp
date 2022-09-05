@@ -93,8 +93,8 @@ class app : public application {
         scene::global().draw();
 
         if (assets->has<type::program>("shader")) {
-            //assets->get<type::entity>("object").getInstance().position.reposition({0.0f, 0.0f, -10.0f});
-            graphics->draw(assets->get<type::entity>("object"), assets->get<type::program>("shader"), graphics->perspective, pos);
+            assets->get<type::entity>("object").getInstance().position.reposition({0.0f, -1.0f, -4.0f});
+            graphics->draw(assets->get<type::entity>("object"), assets->get<type::program>("shader"), graphics->perspective, assets->get<type::entity>("object").getInstance().position);
         }
 
         //gui->draw();
@@ -108,7 +108,7 @@ class app : public application {
             return;
         }
 
-        pos.spin(std::get<double>(scene::global().get("rotation")));
+        assets->get<type::entity>("object").getInstance().position.spin(std::get<double>(scene::global().get("rotation")));
         //pos.surge(0.1f);
         
         return;
